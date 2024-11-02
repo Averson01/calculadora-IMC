@@ -3,14 +3,17 @@ const resultado = document.getElementById("resultado");
  /* aqui estamos a dizer para pegar o elemento cujo o id é ... */
 
  function imc(){
+
     const nome = document.getElementById("nome").value;
     const altura = document.getElementById("altura").value;
     const peso = document.getElementById("peso").value;
     const resultado = document.getElementById("resultado");
+
     if(nome !== '' && altura !== '' && peso !==''){
+
         const valorIMC =(peso / (altura*altura)).toFixed(1)/* usamos o toFixed para arrendondar por 1casa dps do ponto */
 
-        
+
         let classificacao = '';
 
         if(valorIMC < 18.5){
@@ -33,4 +36,4 @@ const resultado = document.getElementById("resultado");
 
  }
  calcular.addEventListener("click", imc);
- /* estamos a referir que a propriedade calcular tem que prestar atençao ou escutar quando alguem clicar e quando alguem clicar o calcular tem que executar a funcao imc */
+ /* estamos a referir que a propriedade calcular tem que prestar atençao ou escutar quando alguem clicar, e quando alguem clicar o calcular tem que executar a funcao imc */
